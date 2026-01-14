@@ -132,7 +132,6 @@ This benchmark applies Sean Goedecke's system design principles:
 .
 ├── README.md                    # This file
 ├── METHODOLOGY.md               # Detailed methodology
-├── GOEDECKE_CRITIQUE.md         # Applying Goedecke's principles
 ├── harness/
 │   ├── harness.sh              # Single-task runner
 │   └── batch-runner.sh         # Multi-task orchestrator
