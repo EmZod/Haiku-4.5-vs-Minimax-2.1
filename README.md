@@ -1,4 +1,4 @@
-# Haiku 4.5 vs MiniMax M2.1: Agentic Capabilities Benchmark
+# Haiku 4.5 vs MiniMax M2.1: Agentic Capabilities Benchmark [pleb version]
 
 A systematic benchmark comparing Claude Haiku 4.5 and MiniMax M2.1 on agentic tasks, with a focus on **path divergence** in multi-turn workflows.
 
@@ -29,7 +29,7 @@ A systematic benchmark comparing Claude Haiku 4.5 and MiniMax M2.1 on agentic ta
 - **Claude Opus 4.5** - for qualitative evaluation using Goedecke's system design principles
 
 ### Framework
-- **pi CLI** - Anthropic's agentic coding assistant
+- **pi CLI** - Badlogic's agentic coding assistant
 - **Shadow-git hook** - Audit trail of all tool calls
 - **Custom harness** - Automated task execution and verification
 
@@ -102,11 +102,11 @@ Turn 10: Final summary
 
 ---
 
-## Goedecke Principles Applied
+## Principles Applied
 
 This benchmark applies Sean Goedecke's system design principles:
 
-1. **"Elite engineering is simple and boring"** - Does the model reach for complexity or stay obvious?
+1. **"Good engineering is simple and boring"** - Does the model reach for complexity or stay obvious?
 2. **"State is the entire problem"** - Does the model track state ownership explicitly?
 3. **"Complexity is debt"** - Does the model add machinery or simplify?
 4. **"Design hot paths first"** - Does the model prioritize critical paths?
