@@ -1,0 +1,22 @@
+Perfect! ✅ **Task completed successfully**
+
+I've created `solution.py` with a complete `Stack` class implementation. All **8 tests pass**:
+
+✅ test_01_create_empty_stack  
+✅ test_02_push_single_item  
+✅ test_03_push_multiple_items  
+✅ test_04_pop_returns_last_pushed  
+✅ test_05_pop_decreases_size  
+✅ test_06_peek_returns_top_without_removing  
+✅ test_07_pop_empty_raises_exception  
+✅ test_08_peek_empty_raises_exception  
+
+**Implementation details:**
+- Stack uses a Python list internally (`_items`)
+- **push()** - adds items to the top of the stack
+- **pop()** - removes and returns the top item (LIFO order); raises `IndexError` if empty
+- **peek()** - returns the top item without removing it; raises `IndexError` if empty  
+- **is_empty()** - returns True if the stack has no items
+- **size()** - returns the current number of items in the stack
+
+The implementation is simple, efficient, and works with any data type.

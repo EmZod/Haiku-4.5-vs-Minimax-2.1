@@ -1,0 +1,12 @@
+✅ **Task Complete!**
+
+I've created `intervals.py` with the `merge_intervals` function. All 8 test cases pass:
+
+1. ✅ Empty input → returns empty list
+2. ✅ Single interval → returns as-is
+3. ✅ Multiple overlapping intervals → merges correctly
+4. ✅ Adjacent intervals → merges (e.g., [1,4] + [4,5] → [1,5])
+5. ✅ Fully contained intervals → returns outer interval
+6. ✅ Nested intervals → handled correctly
+7. ✅ Unsorted input → sorts before merging
+8. ✅ Complex merging scenario → all merged properly

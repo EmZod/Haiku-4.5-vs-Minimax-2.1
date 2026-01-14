@@ -1,0 +1,58 @@
+{
+  "runs": [
+    {
+      "task": "C3-tdd-implement",
+      "model": "minimax",
+      "run": 1,
+      "passed": true,
+      "score": 6,
+      "max_score": 6,
+      "duration": 31
+    },
+    {
+      "task": "C3-tdd-implement",
+      "model": "minimax",
+      "run": 2,
+      "passed": true,
+      "score": 6,
+      "max_score": 6,
+      "duration": 30
+    },
+    {
+      "task": "C3-tdd-implement",
+      "model": "minimax",
+      "run": 3,
+      "passed": true,
+      "score": 6,
+      "max_score": 6,
+      "duration": 35
+    },
+    {
+      "task": "C3-tdd-implement",
+      "model": "haiku",
+      "run": 1,
+      "passed": true,
+      "score": 6,
+      "max_score": 6,
+      "duration": 20
+    },
+    {
+      "task": "C3-tdd-implement",
+      "model": "haiku",
+      "run": 2,
+      "passed": true,
+      "score": 6,
+      "max_score": 6,
+      "duration": 20
+    },
+    {
+      "task": "C3-tdd-implement",
+      "model": "haiku",
+      "run": 3,
+      "passed": true,
+      "score": 6,
+      "max_score": 6,
+      "duration": 21
+    }
+  ]
+}

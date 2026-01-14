@@ -1,0 +1,15 @@
+{"ts":1768404937930,"event":"session_start","agent":"B2-react-counter","turn":0}
+{"ts":1768404937979,"event":"turn_start","agent":"B2-react-counter","turn":0}
+{"ts":1768404941410,"event":"turn_end","agent":"B2-react-counter","turn":0,"toolResultCount":0}
+{"ts":1768404941414,"event":"agent_end","agent":"B2-react-counter","turn":0,"messageCount":2}
+{"ts":1768404941416,"event":"turn_start","agent":"B2-react-counter","turn":0}
+{"ts":1768404943197,"event":"tool_call","agent":"B2-react-counter","turn":0,"tool":"read","toolCallId":"toolu_01AnTAT3hW49zQfsrSCK6gMg","input":{"path":"plan.md"}}
+{"ts":1768404943201,"event":"tool_result","agent":"B2-react-counter","turn":0,"tool":"read","toolCallId":"toolu_01AnTAT3hW49zQfsrSCK6gMg","error":false}
+{"ts":1768404943262,"event":"turn_end","agent":"B2-react-counter","turn":1,"toolResultCount":1}
+{"ts":1768404943263,"event":"turn_start","agent":"B2-react-counter","turn":1}
+{"ts":1768404945606,"event":"tool_call","agent":"B2-react-counter","turn":1,"tool":"write","toolCallId":"toolu_01HBoQYUXjGS1fc9wFuxQQ5z","input":{"path":"Counter.jsx","content":"import React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  const handleIncrement = () => {\n    setCount(count + 1);\n  };\n\n  const handleDecrement = () => {\n    setCount(count - 1);\n  };\n\n  return (\n    <div>\n      <div data-testid=\"count\">{count}</div>\n      <button data-testid=\"increment\" onClick={handleIncrement}>\n        Increment\n      </button>\n      <button data-testid=\"decrement\" onClick={handleDecrement}>\n        Decrement\n      </button>\n    </div>\n  );\n}\n\nexport default Counter;\n"}}
+{"ts":1768404945609,"event":"tool_result","agent":"B2-react-counter","turn":1,"tool":"write","toolCallId":"toolu_01HBoQYUXjGS1fc9wFuxQQ5z","error":false}
+{"ts":1768404945662,"event":"turn_end","agent":"B2-react-counter","turn":2,"toolResultCount":1}
+{"ts":1768404945663,"event":"turn_start","agent":"B2-react-counter","turn":2}
+{"ts":1768404948006,"event":"turn_end","agent":"B2-react-counter","turn":3,"toolResultCount":0}
+{"ts":1768404948010,"event":"agent_end","agent":"B2-react-counter","turn":2,"messageCount":6}

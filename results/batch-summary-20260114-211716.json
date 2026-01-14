@@ -1,0 +1,166 @@
+{
+  "runs": [
+    {
+      "task": "C1-debug-the-bug",
+      "model": "minimax",
+      "run": 1,
+      "passed": true,
+      "score": 5,
+      "max_score": 5,
+      "duration": 65
+    },
+    {
+      "task": "C1-debug-the-bug",
+      "model": "minimax",
+      "run": 2,
+      "passed": false,
+      "score": 4,
+      "max_score": 5,
+      "duration": 45
+    },
+    {
+      "task": "C1-debug-the-bug",
+      "model": "minimax",
+      "run": 3,
+      "passed": true,
+      "score": 5,
+      "max_score": 5,
+      "duration": 35
+    },
+    {
+      "task": "C1-debug-the-bug",
+      "model": "haiku",
+      "run": 1,
+      "passed": true,
+      "score": 5,
+      "max_score": 5,
+      "duration": 25
+    },
+    {
+      "task": "C1-debug-the-bug",
+      "model": "haiku",
+      "run": 2,
+      "passed": true,
+      "score": 5,
+      "max_score": 5,
+      "duration": 20
+    },
+    {
+      "task": "C1-debug-the-bug",
+      "model": "haiku",
+      "run": 3,
+      "passed": true,
+      "score": 5,
+      "max_score": 5,
+      "duration": 30
+    },
+    {
+      "task": "C4-data-pipeline",
+      "model": "minimax",
+      "run": 1,
+      "passed": false,
+      "score": 5,
+      "max_score": 6,
+      "duration": 45
+    },
+    {
+      "task": "C4-data-pipeline",
+      "model": "minimax",
+      "run": 2,
+      "passed": true,
+      "score": 6,
+      "max_score": 6,
+      "duration": 40
+    },
+    {
+      "task": "C4-data-pipeline",
+      "model": "minimax",
+      "run": 3,
+      "passed": false,
+      "score": 5,
+      "max_score": 6,
+      "duration": 30
+    },
+    {
+      "task": "C4-data-pipeline",
+      "model": "haiku",
+      "run": 1,
+      "passed": true,
+      "score": 6,
+      "max_score": 6,
+      "duration": 35
+    },
+    {
+      "task": "C4-data-pipeline",
+      "model": "haiku",
+      "run": 2,
+      "passed": true,
+      "score": 6,
+      "max_score": 6,
+      "duration": 20
+    },
+    {
+      "task": "C4-data-pipeline",
+      "model": "haiku",
+      "run": 3,
+      "passed": true,
+      "score": 6,
+      "max_score": 6,
+      "duration": 30
+    },
+    {
+      "task": "C7-merge-intervals",
+      "model": "minimax",
+      "run": 1,
+      "passed": true,
+      "score": 5,
+      "max_score": 5,
+      "duration": 26
+    },
+    {
+      "task": "C7-merge-intervals",
+      "model": "minimax",
+      "run": 2,
+      "passed": true,
+      "score": 5,
+      "max_score": 5,
+      "duration": 25
+    },
+    {
+      "task": "C7-merge-intervals",
+      "model": "minimax",
+      "run": 3,
+      "passed": true,
+      "score": 5,
+      "max_score": 5,
+      "duration": 25
+    },
+    {
+      "task": "C7-merge-intervals",
+      "model": "haiku",
+      "run": 1,
+      "passed": true,
+      "score": 5,
+      "max_score": 5,
+      "duration": 15
+    },
+    {
+      "task": "C7-merge-intervals",
+      "model": "haiku",
+      "run": 2,
+      "passed": true,
+      "score": 5,
+      "max_score": 5,
+      "duration": 15
+    },
+    {
+      "task": "C7-merge-intervals",
+      "model": "haiku",
+      "run": 3,
+      "passed": true,
+      "score": 5,
+      "max_score": 5,
+      "duration": 20
+    }
+  ]
+}

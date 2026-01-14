@@ -1,0 +1,7 @@
+Done! I've created `Counter.jsx` with:
+
+- ✅ `useState` hook for count state (initialized at 0)
+- ✅ Increment button with `data-testid="increment"`
+- ✅ Decrement button with `data-testid="decrement"`
+- ✅ Count display with `data-testid="count"`
+- ✅ Default export

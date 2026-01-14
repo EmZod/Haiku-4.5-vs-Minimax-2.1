@@ -1,0 +1,17 @@
+# OS files
+.DS_Store
+*.swp
+*.swo
+Thumbs.db
+
+# Temp files
+*.tmp
+*.temp
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Node
+node_modules/

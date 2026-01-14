@@ -1,0 +1,27 @@
+{"ts":1768406116907,"event":"session_start","agent":"C4-data-pipeline","turn":0}
+{"ts":1768406116961,"event":"turn_start","agent":"C4-data-pipeline","turn":0}
+{"ts":1768406125616,"event":"turn_end","agent":"C4-data-pipeline","turn":0,"toolResultCount":0}
+{"ts":1768406125618,"event":"agent_end","agent":"C4-data-pipeline","turn":0,"messageCount":2}
+{"ts":1768406125621,"event":"turn_start","agent":"C4-data-pipeline","turn":0}
+{"ts":1768406127686,"event":"tool_call","agent":"C4-data-pipeline","turn":0,"tool":"read","toolCallId":"call_function_1hbzwl879q7l_1","input":{"path":"plan.md"}}
+{"ts":1768406127689,"event":"tool_result","agent":"C4-data-pipeline","turn":0,"tool":"read","toolCallId":"call_function_1hbzwl879q7l_1","error":false}
+{"ts":1768406127742,"event":"turn_end","agent":"C4-data-pipeline","turn":1,"toolResultCount":1}
+{"ts":1768406127744,"event":"turn_start","agent":"C4-data-pipeline","turn":1}
+{"ts":1768406130287,"event":"tool_call","agent":"C4-data-pipeline","turn":1,"tool":"bash","toolCallId":"call_function_oftr7pm057qr_1","input":{"command":"ls -la"}}
+{"ts":1768406130297,"event":"tool_result","agent":"C4-data-pipeline","turn":1,"tool":"bash","toolCallId":"call_function_oftr7pm057qr_1","error":false}
+{"ts":1768406130352,"event":"turn_end","agent":"C4-data-pipeline","turn":2,"toolResultCount":1}
+{"ts":1768406130354,"event":"turn_start","agent":"C4-data-pipeline","turn":2}
+{"ts":1768406131921,"event":"tool_call","agent":"C4-data-pipeline","turn":2,"tool":"read","toolCallId":"call_function_6l17mqw3h2xe_1","input":{"path":"orders.json"}}
+{"ts":1768406131921,"event":"tool_result","agent":"C4-data-pipeline","turn":2,"tool":"read","toolCallId":"call_function_6l17mqw3h2xe_1","error":false}
+{"ts":1768406131970,"event":"turn_end","agent":"C4-data-pipeline","turn":3,"toolResultCount":1}
+{"ts":1768406131972,"event":"turn_start","agent":"C4-data-pipeline","turn":3}
+{"ts":1768406145767,"event":"tool_call","agent":"C4-data-pipeline","turn":3,"tool":"write","toolCallId":"call_function_1n6fhjx21dq0_1","input":{"content":"customer,order_count,total_spent,avg_order_value\nCharlie,2,405.00,202.50\nAlice,2,300.00,150.00\nBob,1,125.00,125.00\n","path":"summary.csv"}}
+{"ts":1768406145769,"event":"tool_result","agent":"C4-data-pipeline","turn":3,"tool":"write","toolCallId":"call_function_1n6fhjx21dq0_1","error":false}
+{"ts":1768406145825,"event":"turn_end","agent":"C4-data-pipeline","turn":4,"toolResultCount":1}
+{"ts":1768406145827,"event":"turn_start","agent":"C4-data-pipeline","turn":4}
+{"ts":1768406147763,"event":"tool_call","agent":"C4-data-pipeline","turn":4,"tool":"bash","toolCallId":"call_function_wah1k4qvifsg_1","input":{"command":"cat summary.csv"}}
+{"ts":1768406147768,"event":"tool_result","agent":"C4-data-pipeline","turn":4,"tool":"bash","toolCallId":"call_function_wah1k4qvifsg_1","error":false}
+{"ts":1768406147845,"event":"turn_end","agent":"C4-data-pipeline","turn":5,"toolResultCount":1}
+{"ts":1768406147847,"event":"turn_start","agent":"C4-data-pipeline","turn":5}
+{"ts":1768406153998,"event":"turn_end","agent":"C4-data-pipeline","turn":6,"toolResultCount":0}
+{"ts":1768406154000,"event":"agent_end","agent":"C4-data-pipeline","turn":5,"messageCount":12}

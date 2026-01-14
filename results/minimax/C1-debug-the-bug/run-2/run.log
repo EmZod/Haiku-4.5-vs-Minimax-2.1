@@ -1,0 +1,5 @@
+All tests pass. The bug has been fixed.
+
+**The Bug:** The original code always moved `window_start` to `char_index[char] + 1` when a character was seen before, even if that character's previous occurrence was *outside* the current window. This caused `window_start` to move backwards in some cases (like "abba"), producing incorrect results.
+
+**The Fix:** Added a condition `char_index[char] >= window_start` to only update `window_start` when the previous occurrence of the character is actually within the current window. This ensures the sliding window never moves backwards.

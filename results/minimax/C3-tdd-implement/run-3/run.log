@@ -1,0 +1,11 @@
+All 8 tests pass. Here's a summary of what was implemented:
+
+**Created `solution.py`** with a `Stack` class that includes:
+- `__init__()` - Initializes an empty stack using a Python list
+- `push(item)` - Appends item to the end of the list (top of stack)
+- `pop()` - Removes and returns the last item (LIFO), raises `IndexError` if empty
+- `peek()` - Returns the last item without removing it, raises `IndexError` if empty
+- `is_empty()` - Returns `True` if stack is empty
+- `size()` - Returns the number of items in the stack
+
+The implementation uses Python's built-in list with `append()` and `pop()` for O(1) operations, and passes all test cases including error handling for empty stack operations.

@@ -1,0 +1,12 @@
+Done! Created `summary.csv` with the processed data:
+
+| customer | order_count | total_spent | avg_order_value |
+|----------|-------------|-------------|-----------------|
+| Charlie  | 2           | 405         | 202.50          |
+| Alice    | 2           | 300         | 150.00          |
+| Bob      | 1           | 125         | 125.00          |
+
+✓ Only completed orders included (5 of 7)
+✓ Calculations verified
+✓ Sorted by total_spent descending (descending)
+✓ CSV headers correct

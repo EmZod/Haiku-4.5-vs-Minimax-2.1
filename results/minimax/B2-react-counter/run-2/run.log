@@ -1,0 +1,8 @@
+Done! I've created `Counter.jsx` with all the requirements:
+
+✅ **Created file**: `Counter.jsx`
+- Uses `useState` hook for state management
+- Has increment button (`data-testid="increment"`) that adds 1
+- Has decrement button (`data-testid="decrement"`) that subtracts 1
+- Displays count with `data-testid="count"` attribute
+- Exported as default component

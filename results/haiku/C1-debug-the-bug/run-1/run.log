@@ -1,0 +1,34 @@
+## Summary
+
+✅ **Bug found and fixed!**
+
+### The Bug
+The sliding window start position was being updated without checking if it should move backward:
+```python
+window_start = char_index[char] + 1  # ❌ Can move backward
+```
+
+### The Fix
+Changed to ensure the window only moves forward:
+```python
+window_start = max(window_start, char_index[char] + 1)  # ✓ Never moves backward
+```
+
+### Why This Matters
+Without `max()`, when a character at an old position is encountered, the window could shrink incorrectly. For example, in "abba":
+- When the second 'a' is encountered at index 3, its previous position was 0
+- Without the fix, `window_start` would move back to 1, losing valid characters
+- With the fix, `window_start` stays at its current position if it's already further ahead
+
+### Results
+✅ All test cases now pass:
+- `longest_unique_substring("")` → `0`
+- `longest_unique_substring("a")` → `1`
+- `longest_unique_substring("abcabcbb")` → `3`
+- `longest_unique_substring("bbbbb")` → `1`
+- `longest_unique_substring("pwwkew")` → `3`
+- `longest_unique_substring("abba")` → `2`
+
+**Files created:**
+- `buggy.py` (fixed)
+- `test_buggy.py` (verification tests)

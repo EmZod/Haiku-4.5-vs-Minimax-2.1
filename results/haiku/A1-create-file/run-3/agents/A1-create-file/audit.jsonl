@@ -1,0 +1,19 @@
+{"ts":1768404562028,"event":"session_start","agent":"A1-create-file","turn":0}
+{"ts":1768404562082,"event":"turn_start","agent":"A1-create-file","turn":0}
+{"ts":1768404564635,"event":"turn_end","agent":"A1-create-file","turn":0,"toolResultCount":0}
+{"ts":1768404564638,"event":"agent_end","agent":"A1-create-file","turn":0,"messageCount":2}
+{"ts":1768404564641,"event":"turn_start","agent":"A1-create-file","turn":0}
+{"ts":1768404565949,"event":"tool_call","agent":"A1-create-file","turn":0,"tool":"read","toolCallId":"toolu_01RQDizdkfu4gq2TufQXebtJ","input":{"path":"plan.md"}}
+{"ts":1768404565951,"event":"tool_result","agent":"A1-create-file","turn":0,"tool":"read","toolCallId":"toolu_01RQDizdkfu4gq2TufQXebtJ","error":false}
+{"ts":1768404566003,"event":"turn_end","agent":"A1-create-file","turn":1,"toolResultCount":1}
+{"ts":1768404566005,"event":"turn_start","agent":"A1-create-file","turn":1}
+{"ts":1768404567682,"event":"tool_call","agent":"A1-create-file","turn":1,"tool":"write","toolCallId":"toolu_01RbFjTA9HRyWug4DW17uAMB","input":{"path":"hello.txt","content":"Hello World"}}
+{"ts":1768404567685,"event":"tool_result","agent":"A1-create-file","turn":1,"tool":"write","toolCallId":"toolu_01RbFjTA9HRyWug4DW17uAMB","error":false}
+{"ts":1768404567749,"event":"turn_end","agent":"A1-create-file","turn":2,"toolResultCount":1}
+{"ts":1768404567751,"event":"turn_start","agent":"A1-create-file","turn":2}
+{"ts":1768404569018,"event":"tool_call","agent":"A1-create-file","turn":2,"tool":"read","toolCallId":"toolu_017r83poAGzTanpVEuoDtimh","input":{"path":"hello.txt"}}
+{"ts":1768404569020,"event":"tool_result","agent":"A1-create-file","turn":2,"tool":"read","toolCallId":"toolu_017r83poAGzTanpVEuoDtimh","error":false}
+{"ts":1768404569069,"event":"turn_end","agent":"A1-create-file","turn":3,"toolResultCount":1}
+{"ts":1768404569070,"event":"turn_start","agent":"A1-create-file","turn":3}
+{"ts":1768404570215,"event":"turn_end","agent":"A1-create-file","turn":4,"toolResultCount":0}
+{"ts":1768404570218,"event":"agent_end","agent":"A1-create-file","turn":3,"messageCount":8}

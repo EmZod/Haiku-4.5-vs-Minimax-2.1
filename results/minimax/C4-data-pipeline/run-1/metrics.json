@@ -1,0 +1,21 @@
+{
+  "file_exists": true,
+  "correct_headers": true,
+  "correct_row_count": true,
+  "data_correct": false,
+  "correct_rows": 3,
+  "actual_content": "customer,order_count,total_spent,avg_order_value\nCharlie,2,405.0,202.5\nAlice,2,300.0,150.0\nBob,1,125.0,125.0",
+  "correct_sort": true,
+  "read_calls": 6,
+  "write_calls": 2,
+  "bash_calls": 2,
+  "used_tools": true,
+  "score": 5,
+  "max_score": 6,
+  "passed": false,
+  "task": "C4-data-pipeline",
+  "model": "minimax",
+  "run": 1,
+  "duration_seconds": 45,
+  "timestamp": "2026-01-14T21:25:13+05:30"
+}

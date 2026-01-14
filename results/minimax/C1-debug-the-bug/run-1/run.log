@@ -1,0 +1,10 @@
+**Bug Fixed!** ✓
+
+**The Bug:** When a duplicate character was found, the code unconditionally set `window_start = char_index[char] + 1`, which could move the window *backward* if the previous occurrence was outside the current window.
+
+**The Fix:** Changed to `window_start = max(window_start, char_index[char] + 1)` to ensure the window never moves backward.
+
+**Example with "abba":**
+- Position 2 ('b'): window_start moves from 0 → 2 (correct, 'b' was at position 1)
+- Position 3 ('a'): Without the fix, window_start would move from 2 → 1 (wrong, 'a' at position 0 is outside window)
+- With the fix: `max(2, 0+1) = 2` keeps window_start at 2, giving substring "ba" (length 2)

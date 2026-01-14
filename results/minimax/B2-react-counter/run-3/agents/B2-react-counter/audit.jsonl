@@ -1,0 +1,15 @@
+{"ts":1768404918277,"event":"session_start","agent":"B2-react-counter","turn":0}
+{"ts":1768404918332,"event":"turn_start","agent":"B2-react-counter","turn":0}
+{"ts":1768404922533,"event":"turn_end","agent":"B2-react-counter","turn":0,"toolResultCount":0}
+{"ts":1768404922535,"event":"agent_end","agent":"B2-react-counter","turn":0,"messageCount":2}
+{"ts":1768404922536,"event":"turn_start","agent":"B2-react-counter","turn":0}
+{"ts":1768404924217,"event":"tool_call","agent":"B2-react-counter","turn":0,"tool":"read","toolCallId":"call_function_zjvvnolreps9_1","input":{"path":"plan.md"}}
+{"ts":1768404924220,"event":"tool_result","agent":"B2-react-counter","turn":0,"tool":"read","toolCallId":"call_function_zjvvnolreps9_1","error":false}
+{"ts":1768404924287,"event":"turn_end","agent":"B2-react-counter","turn":1,"toolResultCount":1}
+{"ts":1768404924288,"event":"turn_start","agent":"B2-react-counter","turn":1}
+{"ts":1768404928335,"event":"tool_call","agent":"B2-react-counter","turn":1,"tool":"write","toolCallId":"call_function_5lchtvj81w5m_1","input":{"content":"import React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  const increment = () => {\n    setCount(count + 1);\n  };\n\n  const decrement = () => {\n    setCount(count - 1);\n  };\n\n  return (\n    <div>\n      <span data-testid=\"count\">{count}</span>\n      <button data-testid=\"increment\" onClick={increment}>Increment</button>\n      <button data-testid=\"decrement\" onClick={decrement}>Decrement</button>\n    </div>\n  );\n}\n\nexport default Counter;\n","path":"Counter.jsx"}}
+{"ts":1768404928336,"event":"tool_result","agent":"B2-react-counter","turn":1,"tool":"write","toolCallId":"call_function_5lchtvj81w5m_1","error":false}
+{"ts":1768404928400,"event":"turn_end","agent":"B2-react-counter","turn":2,"toolResultCount":1}
+{"ts":1768404928401,"event":"turn_start","agent":"B2-react-counter","turn":2}
+{"ts":1768404931593,"event":"turn_end","agent":"B2-react-counter","turn":3,"toolResultCount":0}
+{"ts":1768404931596,"event":"agent_end","agent":"B2-react-counter","turn":2,"messageCount":6}

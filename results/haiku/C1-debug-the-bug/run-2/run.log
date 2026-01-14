@@ -1,0 +1,14 @@
+Perfect! ✅ All tests pass.
+
+## Summary
+
+**Bug Found & Fixed:**
+- **Location:** Line where `window_start` is updated
+- **Issue:** `window_start = char_index[char] + 1` unconditionally moved the window start, causing it to move backward when processing repeated characters
+- **Fix:** Changed to `window_start = max(window_start, char_index[char] + 1)` to ensure the window only ever moves forward
+
+**Files Created:**
+1. **`buggy.py`** - Fixed version with the minimal one-line change
+2. **`test_buggy.py`** - Test suite that verifies all 6 test cases pass
+
+The sliding window algorithm now correctly maintains that the window never shrinks, which is essential for the correctness of the longest substring without repeating characters algorithm.

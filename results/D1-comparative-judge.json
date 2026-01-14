@@ -1,0 +1,105 @@
+{
+  "path_divergences": [
+    {
+      "decision_point": "Session storage",
+      "model_a_choice": "Redis with 24-hour sliding TTL, explicit session format (JSON with user_id, created_at, last_accessed, ip, user_agent), secure HTTP-only cookie",
+      "model_b_choice": "Redis with 1-hour hard TTL, mentions cache invalidation on logout, notes session token reuse vulnerability in limitations",
+      "better_choice": "A",
+      "reasoning": "Model A's sliding TTL is more user-friendly (no surprise logouts during active use). Model B acknowledges their 1-hour TTL creates a security gap where logout isn't instant. Model A's explicit session format shows clearer thinking about what state actually needs to be stored."
+    },
+    {
+      "decision_point": "Rate limiting algorithm",
+      "model_a_choice": "Sliding window counter using Redis sorted sets (timestamp as score), 100 req/min per user",
+      "model_b_choice": "Token bucket algorithm in Redis hash per user ({tokens, last_refill_time}), 100 req/min per user",
+      "better_choice": "TIE",
+      "reasoning": "Both are valid approaches. Sliding window is slightly more accurate for preventing bursts at window boundaries. Token bucket is simpler to implement and reason about. Neither is clearly wrong - this is a legitimate design choice."
+    },
+    {
+      "decision_point": "Audit log architecture",
+      "model_a_choice": "Async via internal message queue from the start, explicit schema with covering indexes, clear ownership statement ('Audit Service OWNS the audit_logs table')",
+      "model_b_choice": "Write-ahead logging with PostgreSQL, only moved to async AFTER performance problem was injected in Turn 4",
+      "better_choice": "A",
+      "reasoning": "Model A anticipated the performance issue - audit logs were async from Turn 3. Model B put audit logging on the hot path initially and only fixed it reactively. This shows Model A has better intuition about what belongs on hot paths."
+    },
+    {
+      "decision_point": "Performance fix (Turn 4)",
+      "model_a_choice": "Two surgical fixes: (1) Redis cache with 5-min TTL for recent activity, (2) covering index. Clear before/after metrics.",
+      "model_b_choice": "Five fixes: (1) remove from hot path, (2) composite index, (3) LRU cache, (4) archive old logs, (5) read replica. Plus 'new decision' to make audit async.",
+      "better_choice": "A",
+      "reasoning": "Model A's fix is minimal and targeted. Model B's response is a shotgun blast of 5 different changes - classic panic response to a production incident. Worse, Model B only NOW decides audit should be async, revealing they didn't think about this upfront. The archive and read replica are premature optimization for a 10K user system."
+    },
+    {
+      "decision_point": "Rate limiter fix (Turn 5)",
+      "model_a_choice": "Tiered rate limiting with identity hierarchy (API key > User > IP), configurable per-key limits stored in database, default 1000/min for API keys (10x user limit)",
+      "model_b_choice": "Burst allowance with separate per-minute and per-second buckets, plus tiered limits (Basic 100, Enterprise 500, CI/CD unlimited/whitelisted)",
+      "better_choice": "A",
+      "reasoning": "Model A's solution is more principled - it recognizes the identity model was wrong (user_id vs API key) and fixes the abstraction. Model B adds complexity (burst buckets) and dangerous escape hatches (unlimited for CI/CD). 'Unlimited' rate limits are a foot-gun waiting to happen."
+    },
+    {
+      "decision_point": "Multi-region strategy",
+      "model_a_choice": "Detailed regional data classification, global user registry as single source of truth, explicit cross-region session validation flow with local caching, clear data residency rules",
+      "model_b_choice": "Regional vs global state mentioned, geo-aware router, but less specific about cross-region flows. Notes 'webhook delivery to customers might span regions' as a failure mode without resolution",
+      "better_choice": "A",
+      "reasoning": "Model A thought through the hard cases (US user traveling to EU) and has explicit flows. Model B identifies the webhook cross-region issue but leaves it as 'need careful routing' without specifying how. Model A's global user registry is the boring, obvious solution for region assignment."
+    },
+    {
+      "decision_point": "Webhook reliability",
+      "model_a_choice": "Exponential backoff schedule (0, 60s, 5min, 30min, 2hr, 6hr), 6 attempts over ~9 hours, explicit timeout config (5s connect, 10s read), dead letter after max retries",
+      "model_b_choice": "RabbitMQ queue, exponential backoff (1s, 2s, 4s, 8s, 16s), 5 retries, 30s HTTP timeout, dead letter queue",
+      "better_choice": "A",
+      "reasoning": "Model A's retry schedule is more realistic for production - endpoints might be down for hours during incidents. Model B's 31-second total retry window (1+2+4+8+16) is far too aggressive; a 5-minute customer outage would exhaust all retries. Model A's 30s timeout vs Model B's 30s is the same, but Model A breaks it down (5s connect + 10s read + buffer)."
+    },
+    {
+      "decision_point": "Conflicting requirements (encryption vs debuggability)",
+      "model_a_choice": "Dual-mode webhooks: 'encrypted' (RSA-OAEP + AES-GCM, no debug view) or 'signed' (HMAC, debug view available). Customer chooses. Default based on event sensitivity. Clear UI mockup.",
+      "model_b_choice": "All payloads encrypted, but decryption keys in secure vault. Dashboard shows metadata unencrypted, explicit decrypt action with audit trail. Ops access via separate secure channel.",
+      "better_choice": "A",
+      "reasoning": "Model A's solution is elegant - push the choice to the customer who understands their own security requirements. Model B's solution is more complex operationally (vault, audit trail for decryption, separate ops channel) and doesn't actually give customers control. Model A's 'encrypted vs signed' is a cleaner abstraction than 'encrypted but we can decrypt with audit trail'."
+    },
+    {
+      "decision_point": "Scale preparation (Turn 9)",
+      "model_a_choice": "Not addressed - no Turn 9 in Model A's document",
+      "model_b_choice": "Detailed 2-week plan: horizontal scaling (3 instances), database upgrade, async audit, webhook concurrency, Redis cluster, monitoring dashboards. Explicit 'not time for' list.",
+      "better_choice": "B",
+      "reasoning": "Model B actually addressed Turn 9 while Model A did not. Model B's response is pragmatic - scale horizontally first, defer architectural changes. The 'not time for 2 weeks' list shows good prioritization."
+    }
+  ],
+  "pattern_analysis": {
+    "complexity_attractor": {
+      "model_a": "Reaches for complexity when solving hard problems (dual-mode webhooks, tiered rate limiting), but the complexity is in the right place - customer-facing choices rather than internal machinery. Tends to solve problems at the abstraction level.",
+      "model_b": "Reaches for complexity reactively - adds multiple fixes to single problems (Turn 4's 5 fixes), adds escape hatches (unlimited CI/CD), and builds internal machinery (vault + audit trail for decryption) rather than simplifying the problem.",
+      "more_restrained": "A"
+    },
+    "state_consciousness": {
+      "model_a": "Highly conscious. State inventory has 15 items with explicit regional ownership. Every decision includes 'State Ownership' section. Explicitly states 'Audit Service OWNS the audit_logs table'. Cross-references state interactions.",
+      "model_b": "Moderately conscious. State inventory has 8 items, less explicit about ownership. Some state decisions are implicit (where does the tiered rate limit config live?). Better about operational state (monitoring dashboards).",
+      "more_conscious": "A"
+    },
+    "failure_awareness": {
+      "model_a": "Proactive. Failure modes table includes 11 scenarios with Open/Closed strategy for each. Webhook section explicitly addresses slow endpoints, down endpoints, and encryption key unavailability. Audit async design prevents hot-path failures from the start.",
+      "model_b": "Reactive with good recovery. Initial designs didn't anticipate failures (audit on hot path), but the operational runbook is excellent - specific metrics, thresholds, and fix procedures. Better ops documentation despite worse initial design.",
+      "more_aware": "A"
+    },
+    "recovery_style": {
+      "model_a": "Surgical. Turn 4 fix is 2 changes with clear reasoning. Turn 5 fix identifies the actual problem (identity model was wrong) and fixes the abstraction. Each fix has explicit trade-offs documented.",
+      "model_b": "Shotgun. Turn 4 fix is 5 changes at once - impossible to know which one actually helped. Turn 5 adds complexity (burst buckets) rather than fixing the model. However, the operational runbook suggests good incident response capability.",
+      "better_recovery": "A"
+    }
+  },
+  "verdict": {
+    "ship_tomorrow": "A",
+    "easier_to_operate": "B",
+    "easier_to_explain": "A",
+    "less_debt_in_6_months": "A",
+    "overall_winner": "A",
+    "confidence": "MEDIUM",
+    "summary": "Model A demonstrates better upfront design thinking - audit logging was async from the start, state ownership is explicit, and solutions fix abstractions rather than patching symptoms. Model A's dual-mode webhook design is particularly elegant, pushing security decisions to customers rather than building complex internal machinery. However, Model B has a significantly better operational runbook and actually addressed the 10x scale scenario that Model A skipped. If I had to debug this system at 3am, Model B's runbook would be invaluable. But if I had to maintain this system for 6 months, Model A's cleaner abstractions would accumulate less debt. The confidence is MEDIUM because Model B's operational pragmatism is genuinely valuable - good runbooks matter more than elegant abstractions when the pager goes off."
+  },
+  "goedecke_verdict": {
+    "model_a_score": "7",
+    "model_b_score": "5",
+    "model_a_would_approve": true,
+    "model_b_would_approve": false,
+    "key_insight": "Goedecke would look at Model B's Turn 4 response (5 simultaneous fixes to one problem) and say 'you're panicking instead of thinking.' He'd appreciate Model A's instinct to make audit logging async from the start - that's the kind of obvious decision that shouldn't require a production incident to discover. The dual-mode webhook design would get a nod - 'let the customer decide' is boring and correct. Model B's 'unlimited rate limiting for CI/CD' would get a raised eyebrow - that's a time bomb. However, he'd also note that Model A completely skipped Turn 9 (scale preparation), which is a real gap. Model B's operational runbook shows someone who has been paged at 3am; Model A's design shows someone who thinks carefully but may not have shipped under pressure. Overall: Model A thinks better, Model B operates better. For a senior hire, you'd want both - but if forced to choose, clear thinking is harder to teach than operational skills."
+  }
+}

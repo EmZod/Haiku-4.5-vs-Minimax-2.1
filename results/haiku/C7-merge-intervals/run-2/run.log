@@ -1,0 +1,27 @@
+Perfect! ✓ Task completed successfully.
+
+## Summary
+
+I've created **`intervals.py`** with the `merge_intervals` function that:
+
+1. **Handles all edge cases:**
+   - Empty input → returns []
+   - Single interval → returns as-is
+   - No overlaps → returns sorted intervals
+   - All overlapping → returns single interval
+   - Adjacent intervals → merges them
+   - Nested intervals → returns outer interval
+   - Unsorted input → sorts first
+
+2. **Algorithm:**
+   - Sort intervals by start value
+   - Iterate through sorted intervals
+   - Merge if current start ≤ last merged end
+   - Otherwise, add as new interval
+
+3. **Test Results:**
+   - ✓ All 8 test cases pass
+   - ✓ Correctly handles all specified edge cases
+   - ✓ Returns intervals sorted by start
+
+The implementation is ready for use!

@@ -1,0 +1,21 @@
+Perfect! I've successfully created the `intervals.py` file with the `merge_intervals` function. 
+
+**Summary:**
+- ✅ Created `intervals.py` with the `merge_intervals` function
+- ✅ All 8 test cases pass
+- ✅ Handles all edge cases:
+  - Empty input
+  - Single interval
+  - No overlaps (returns sorted)
+  - All intervals overlapping (returns single merged)
+  - Adjacent intervals (touching at same point)
+  - Nested intervals
+  - Unsorted input
+
+**Algorithm:**
+1. Returns empty list for empty input
+2. Sorts intervals by start time
+3. Merges overlapping or adjacent intervals by extending the end point
+4. Returns sorted merged intervals
+
+The implementation is efficient with O(n log n) time complexity due to sorting.

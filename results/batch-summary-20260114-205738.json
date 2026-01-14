@@ -1,0 +1,274 @@
+{
+  "runs": [
+    {
+      "task": "A1-create-file",
+      "model": "minimax",
+      "run": 1,
+      "passed": true,
+      "score": 4,
+      "max_score": 4,
+      "duration": 20
+    },
+    {
+      "task": "A1-create-file",
+      "model": "minimax",
+      "run": 2,
+      "passed": true,
+      "score": 4,
+      "max_score": 4,
+      "duration": 25
+    },
+    {
+      "task": "A1-create-file",
+      "model": "minimax",
+      "run": 3,
+      "passed": true,
+      "score": 4,
+      "max_score": 4,
+      "duration": 15
+    },
+    {
+      "task": "A1-create-file",
+      "model": "haiku",
+      "run": 1,
+      "passed": true,
+      "score": 4,
+      "max_score": 4,
+      "duration": 10
+    },
+    {
+      "task": "A1-create-file",
+      "model": "haiku",
+      "run": 2,
+      "passed": true,
+      "score": 4,
+      "max_score": 4,
+      "duration": 10
+    },
+    {
+      "task": "A1-create-file",
+      "model": "haiku",
+      "run": 3,
+      "passed": true,
+      "score": 4,
+      "max_score": 4,
+      "duration": 10
+    },
+    {
+      "task": "A2-count-lines",
+      "model": "minimax",
+      "run": 1,
+      "passed": true,
+      "score": 4,
+      "max_score": 4,
+      "duration": 20
+    },
+    {
+      "task": "A2-count-lines",
+      "model": "minimax",
+      "run": 2,
+      "passed": true,
+      "score": 4,
+      "max_score": 4,
+      "duration": 30
+    },
+    {
+      "task": "A2-count-lines",
+      "model": "minimax",
+      "run": 3,
+      "passed": true,
+      "score": 4,
+      "max_score": 4,
+      "duration": 20
+    },
+    {
+      "task": "A2-count-lines",
+      "model": "haiku",
+      "run": 1,
+      "passed": true,
+      "score": 4,
+      "max_score": 4,
+      "duration": 15
+    },
+    {
+      "task": "A2-count-lines",
+      "model": "haiku",
+      "run": 2,
+      "passed": true,
+      "score": 4,
+      "max_score": 4,
+      "duration": 15
+    },
+    {
+      "task": "A2-count-lines",
+      "model": "haiku",
+      "run": 3,
+      "passed": true,
+      "score": 4,
+      "max_score": 4,
+      "duration": 15
+    },
+    {
+      "task": "B1-fizzbuzz",
+      "model": "minimax",
+      "run": 1,
+      "passed": false,
+      "score": 3,
+      "max_score": 4,
+      "duration": 25
+    },
+    {
+      "task": "B1-fizzbuzz",
+      "model": "minimax",
+      "run": 2,
+      "passed": false,
+      "score": 3,
+      "max_score": 4,
+      "duration": 25
+    },
+    {
+      "task": "B1-fizzbuzz",
+      "model": "minimax",
+      "run": 3,
+      "passed": false,
+      "score": 3,
+      "max_score": 4,
+      "duration": 20
+    },
+    {
+      "task": "B1-fizzbuzz",
+      "model": "haiku",
+      "run": 1,
+      "passed": false,
+      "score": 3,
+      "max_score": 4,
+      "duration": 16
+    },
+    {
+      "task": "B1-fizzbuzz",
+      "model": "haiku",
+      "run": 2,
+      "passed": false,
+      "score": 3,
+      "max_score": 4,
+      "duration": 15
+    },
+    {
+      "task": "B1-fizzbuzz",
+      "model": "haiku",
+      "run": 3,
+      "passed": false,
+      "score": 3,
+      "max_score": 4,
+      "duration": 15
+    },
+    {
+      "task": "B2-react-counter",
+      "model": "minimax",
+      "run": 1,
+      "passed": true,
+      "score": 5,
+      "max_score": 5,
+      "duration": 25
+    },
+    {
+      "task": "B2-react-counter",
+      "model": "minimax",
+      "run": 2,
+      "passed": true,
+      "score": 5,
+      "max_score": 5,
+      "duration": 20
+    },
+    {
+      "task": "B2-react-counter",
+      "model": "minimax",
+      "run": 3,
+      "passed": true,
+      "score": 5,
+      "max_score": 5,
+      "duration": 15
+    },
+    {
+      "task": "B2-react-counter",
+      "model": "haiku",
+      "run": 1,
+      "passed": true,
+      "score": 5,
+      "max_score": 5,
+      "duration": 15
+    },
+    {
+      "task": "B2-react-counter",
+      "model": "haiku",
+      "run": 2,
+      "passed": true,
+      "score": 5,
+      "max_score": 5,
+      "duration": 15
+    },
+    {
+      "task": "B2-react-counter",
+      "model": "haiku",
+      "run": 3,
+      "passed": true,
+      "score": 5,
+      "max_score": 5,
+      "duration": 15
+    },
+    {
+      "task": "E1-handle-missing-file",
+      "model": "minimax",
+      "run": 1,
+      "passed": true,
+      "score": 5,
+      "max_score": 5,
+      "duration": 25
+    },
+    {
+      "task": "E1-handle-missing-file",
+      "model": "minimax",
+      "run": 2,
+      "passed": true,
+      "score": 5,
+      "max_score": 5,
+      "duration": 20
+    },
+    {
+      "task": "E1-handle-missing-file",
+      "model": "minimax",
+      "run": 3,
+      "passed": true,
+      "score": 5,
+      "max_score": 5,
+      "duration": 25
+    },
+    {
+      "task": "E1-handle-missing-file",
+      "model": "haiku",
+      "run": 1,
+      "passed": true,
+      "score": 5,
+      "max_score": 5,
+      "duration": 15
+    },
+    {
+      "task": "E1-handle-missing-file",
+      "model": "haiku",
+      "run": 2,
+      "passed": true,
+      "score": 5,
+      "max_score": 5,
+      "duration": 20
+    },
+    {
+      "task": "E1-handle-missing-file",
+      "model": "haiku",
+      "run": 3,
+      "passed": true,
+      "score": 5,
+      "max_score": 5,
+      "duration": 15
+    }
+  ]
+}

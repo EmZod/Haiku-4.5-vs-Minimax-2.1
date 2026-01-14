@@ -1,0 +1,22 @@
+All 8 tests pass. ✅
+
+## Summary
+
+I created `solution.py` with a `Stack` class that implements:
+
+- **`__init__()`** - Initializes an empty stack using a list
+- **`push(item)`** - Appends item to the stack
+- **`pop()`** - Removes and returns the top item (LIFO order), raises `IndexError` if empty
+- **`peek()`** - Returns top item without removing it, raises `IndexError` if empty
+- **`is_empty()`** - Returns `True` if stack is empty
+- **`size()`** - Returns the number of items in the stack
+
+All test cases pass:
+1. ✅ Create empty stack
+2. ✅ Push single item
+3. ✅ Push multiple items
+4. ✅ Pop returns last pushed (LIFO)
+5. ✅ Pop decreases size
+6. ✅ Peek returns top without removing
+7. ✅ Pop empty raises IndexError
+8. ✅ Peek empty raises IndexError

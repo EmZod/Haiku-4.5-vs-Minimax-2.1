@@ -1,0 +1,31 @@
+## Task Complete! ✓
+
+I've successfully debugged and fixed the bug in `buggy.py`. Here's what was done:
+
+### The Bug
+The sliding window algorithm wasn't preventing the window from moving **backwards**. On line 18, when a repeated character was found, the code would set:
+```python
+window_start = char_index[char] + 1
+```
+
+This could move the window backwards if the repeated character appeared before the current window start.
+
+### The Fix
+Changed to use `max()` to ensure the window only moves forward:
+```python
+window_start = max(window_start, char_index[char] + 1)
+```
+
+### Files Created
+1. **buggy.py** - Fixed version (1 line change)
+2. **test_buggy.py** - Comprehensive test suite
+3. **BUG_FIX_SUMMARY.md** - Detailed explanation
+
+### Test Results
+✓ All 6 test cases passing:
+- Empty string: 0
+- Single char: 1
+- "abcabcbb": 3
+- "bbbbb": 1
+- "pwwkew": 3
+- "abba": 2

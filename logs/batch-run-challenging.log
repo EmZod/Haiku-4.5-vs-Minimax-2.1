@@ -1,0 +1,143 @@
+============================================================
+BENCHMARK BATCH RUN
+============================================================
+Tasks:  C1-debug-the-bug C3-tdd-implement C4-data-pipeline C7-merge-intervals
+Models: minimax haiku
+Runs:   3 per task per model
+Total:  24 benchmark runs
+============================================================
+
+
+>>> Running: C1-debug-the-bug | minimax | run 1/3
+-----------------------------------------------------------
+✅ PASSED (5/5) in 65s
+
+>>> Running: C1-debug-the-bug | minimax | run 2/3
+-----------------------------------------------------------
+❌ FAILED (4/5) in 45s
+
+>>> Running: C1-debug-the-bug | minimax | run 3/3
+-----------------------------------------------------------
+✅ PASSED (5/5) in 35s
+
+>>> Running: C1-debug-the-bug | haiku | run 1/3
+-----------------------------------------------------------
+✅ PASSED (5/5) in 25s
+
+>>> Running: C1-debug-the-bug | haiku | run 2/3
+-----------------------------------------------------------
+✅ PASSED (5/5) in 20s
+
+>>> Running: C1-debug-the-bug | haiku | run 3/3
+-----------------------------------------------------------
+✅ PASSED (5/5) in 30s
+
+>>> Running: C3-tdd-implement | minimax | run 1/3
+-----------------------------------------------------------
+❌ FAILED (/) in s
+jq: invalid JSON text passed to --argjson
+Use jq --help for help with command-line options,
+or see the jq manpage, or online docs  at https://stedolan.github.io/jq
+
+>>> Running: C3-tdd-implement | minimax | run 2/3
+-----------------------------------------------------------
+❌ FAILED (/) in s
+jq: invalid JSON text passed to --argjson
+Use jq --help for help with command-line options,
+or see the jq manpage, or online docs  at https://stedolan.github.io/jq
+
+>>> Running: C3-tdd-implement | minimax | run 3/3
+-----------------------------------------------------------
+❌ FAILED (/) in s
+jq: invalid JSON text passed to --argjson
+Use jq --help for help with command-line options,
+or see the jq manpage, or online docs  at https://stedolan.github.io/jq
+
+>>> Running: C3-tdd-implement | haiku | run 1/3
+-----------------------------------------------------------
+❌ FAILED (/) in s
+jq: invalid JSON text passed to --argjson
+Use jq --help for help with command-line options,
+or see the jq manpage, or online docs  at https://stedolan.github.io/jq
+
+>>> Running: C3-tdd-implement | haiku | run 2/3
+-----------------------------------------------------------
+❌ FAILED (/) in s
+jq: invalid JSON text passed to --argjson
+Use jq --help for help with command-line options,
+or see the jq manpage, or online docs  at https://stedolan.github.io/jq
+
+>>> Running: C3-tdd-implement | haiku | run 3/3
+-----------------------------------------------------------
+❌ FAILED (/) in s
+jq: invalid JSON text passed to --argjson
+Use jq --help for help with command-line options,
+or see the jq manpage, or online docs  at https://stedolan.github.io/jq
+
+>>> Running: C4-data-pipeline | minimax | run 1/3
+-----------------------------------------------------------
+❌ FAILED (5/6) in 45s
+
+>>> Running: C4-data-pipeline | minimax | run 2/3
+-----------------------------------------------------------
+✅ PASSED (6/6) in 40s
+
+>>> Running: C4-data-pipeline | minimax | run 3/3
+-----------------------------------------------------------
+❌ FAILED (5/6) in 30s
+
+>>> Running: C4-data-pipeline | haiku | run 1/3
+-----------------------------------------------------------
+✅ PASSED (6/6) in 35s
+
+>>> Running: C4-data-pipeline | haiku | run 2/3
+-----------------------------------------------------------
+✅ PASSED (6/6) in 20s
+
+>>> Running: C4-data-pipeline | haiku | run 3/3
+-----------------------------------------------------------
+✅ PASSED (6/6) in 30s
+
+>>> Running: C7-merge-intervals | minimax | run 1/3
+-----------------------------------------------------------
+✅ PASSED (5/5) in 26s
+
+>>> Running: C7-merge-intervals | minimax | run 2/3
+-----------------------------------------------------------
+✅ PASSED (5/5) in 25s
+
+>>> Running: C7-merge-intervals | minimax | run 3/3
+-----------------------------------------------------------
+✅ PASSED (5/5) in 25s
+
+>>> Running: C7-merge-intervals | haiku | run 1/3
+-----------------------------------------------------------
+✅ PASSED (5/5) in 15s
+
+>>> Running: C7-merge-intervals | haiku | run 2/3
+-----------------------------------------------------------
+✅ PASSED (5/5) in 15s
+
+>>> Running: C7-merge-intervals | haiku | run 3/3
+-----------------------------------------------------------
+✅ PASSED (5/5) in 20s
+
+============================================================
+BATCH COMPLETE
+============================================================
+Total runs: 24
+Passed:     15
+Failed:     9
+Pass rate:  62.5%
+
+Summary saved to: results/batch-summary-20260114-211716.json
+
+=== Results by Model ===
+minimax: 6/9 passed, avg 37.333333333333336s
+haiku: 9/9 passed, avg 23.333333333333332s
+
+=== Results by Task ===
+C1-debug-the-bug: 5/6 passed
+C3-tdd-implement: 0/0 passed
+C4-data-pipeline: 4/6 passed
+C7-merge-intervals: 6/6 passed

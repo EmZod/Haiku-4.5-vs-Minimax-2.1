@@ -1,0 +1,7 @@
+All tests pass! The bug has been fixed.
+
+**Summary:**
+- **Bug:** The code was setting `window_start = char_index[char] + 1` without checking if the current `window_start` was already past that position
+- **Fix:** Changed to `window_start = max(window_start, char_index[char] + 1)` to ensure the window never moves backward
+
+The sliding window now correctly handles cases like "abba" where duplicate characters appear after the window has already moved past their previous occurrence.

@@ -1,0 +1,6 @@
+All 8 test cases pass. The implementation:
+
+1. **Sorts intervals** by start time to handle unsorted input
+2. **Merges overlapping/adjacent intervals** using `current[0] <= last[1]` (the `<=` handles adjacent intervals like `[1,4]` and `[4,5]`)
+3. **Updates end time** with `max()` to handle nested intervals
+4. **Handles edge cases**: empty list, single interval, no overlaps, all overlapping

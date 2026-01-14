@@ -1,0 +1,19 @@
+✅ **Task completed successfully!**
+
+**Summary of work:**
+
+Created `summary.csv` with the following results:
+
+| Customer | Order Count | Total Spent | Avg Order Value |
+|----------|-------------|-------------|-----------------|
+| Charlie  | 2           | $405.00     | $202.50         |
+| Alice    | 2           | $300.00     | $150.00         |
+| Bob      | 1           | $125.00     | $125.00         |
+
+**Verification:**
+- ✅ Filtered to only completed orders (excluded ORD003 and ORD006)
+- ✅ Calculated totals correctly (sum of quantity × price)
+- ✅ Aggregated by customer with accurate counts and sums
+- ✅ Sorted descending by total_spent
+- ✅ Average values rounded to 2 decimals
+- ✅ CSV has proper headers and formatting

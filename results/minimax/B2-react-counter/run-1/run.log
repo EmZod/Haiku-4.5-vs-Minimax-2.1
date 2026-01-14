@@ -1,0 +1,10 @@
+Done! I've created the `Counter.jsx` file with:
+
+✅ **File created**: `Counter.jsx`
+- Uses `useState` hook to manage count state (initialized at 0)
+- **Increment button** - adds 1 to the count with `data-testid="increment"`
+- **Decrement button** - subtracts 1 from the count with `data-testid="decrement"`
+- **Count display** - shows current count with `data-testid="count"`
+- Exported as default component
+
+The component is ready to use in a React application.

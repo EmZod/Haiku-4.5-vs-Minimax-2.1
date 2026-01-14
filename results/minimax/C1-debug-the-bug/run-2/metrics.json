@@ -1,0 +1,21 @@
+{
+  "file_exists": true,
+  "valid_syntax": true,
+  "tests_passed": 6,
+  "tests_failed": 0,
+  "all_tests_pass": true,
+  "correct_fix_pattern": false,
+  "read_calls": 4,
+  "edit_calls": 2,
+  "write_calls": 0,
+  "bash_calls": 2,
+  "used_tools": true,
+  "score": 4,
+  "max_score": 5,
+  "passed": false,
+  "task": "C1-debug-the-bug",
+  "model": "minimax",
+  "run": 2,
+  "duration_seconds": 45,
+  "timestamp": "2026-01-14T21:19:14+05:30"
+}

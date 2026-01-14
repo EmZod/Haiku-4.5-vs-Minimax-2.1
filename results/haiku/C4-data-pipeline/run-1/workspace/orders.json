@@ -1,0 +1,68 @@
+[
+  {
+    "id": "ORD001",
+    "customer": "Alice",
+    "items": [
+      {"name": "Widget", "quantity": 2, "price": 25.00},
+      {"name": "Gadget", "quantity": 1, "price": 50.00}
+    ],
+    "status": "completed",
+    "date": "2024-01-15"
+  },
+  {
+    "id": "ORD002",
+    "customer": "Bob",
+    "items": [
+      {"name": "Widget", "quantity": 5, "price": 25.00}
+    ],
+    "status": "completed",
+    "date": "2024-01-16"
+  },
+  {
+    "id": "ORD003",
+    "customer": "Alice",
+    "items": [
+      {"name": "Gizmo", "quantity": 3, "price": 30.00}
+    ],
+    "status": "cancelled",
+    "date": "2024-01-17"
+  },
+  {
+    "id": "ORD004",
+    "customer": "Charlie",
+    "items": [
+      {"name": "Widget", "quantity": 1, "price": 25.00},
+      {"name": "Gadget", "quantity": 2, "price": 50.00},
+      {"name": "Gizmo", "quantity": 1, "price": 30.00}
+    ],
+    "status": "completed",
+    "date": "2024-01-18"
+  },
+  {
+    "id": "ORD005",
+    "customer": "Alice",
+    "items": [
+      {"name": "Gadget", "quantity": 4, "price": 50.00}
+    ],
+    "status": "completed",
+    "date": "2024-01-19"
+  },
+  {
+    "id": "ORD006",
+    "customer": "Bob",
+    "items": [
+      {"name": "Gizmo", "quantity": 2, "price": 30.00}
+    ],
+    "status": "pending",
+    "date": "2024-01-20"
+  },
+  {
+    "id": "ORD007",
+    "customer": "Charlie",
+    "items": [
+      {"name": "Widget", "quantity": 10, "price": 25.00}
+    ],
+    "status": "completed",
+    "date": "2024-01-21"
+  }
+]

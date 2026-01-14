@@ -1,0 +1,4 @@
+customer,order_count,total_spent,avg_order_value
+Charlie,2,405.00,202.50
+Alice,2,300.00,150.00
+Bob,1,125.00,125.00

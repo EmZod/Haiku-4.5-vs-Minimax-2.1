@@ -1,0 +1,7 @@
+Done! I've executed the task:
+
+1. **Read** `input.txt` - contained 7 lines
+2. **Counted** the lines
+3. **Created** `output.txt` with just the number `7`
+
+The `output.txt` file now contains the correct line count with no extra text, as required.

@@ -1,0 +1,17 @@
+✅ **Task completed successfully!**
+
+**What I did:**
+1. **Attempted to read `data.json`** — File not found error (ENOENT) was triggered as expected
+2. **Handled the error gracefully** — Recognized the missing file scenario
+3. **Created `report.txt`** with the exact required content:
+   - Line 1: "ERROR: File not found"
+   - Line 2: "Missing file: data.json"
+   - Line 3: "Status: Handled gracefully"
+
+**Success Criteria Met:**
+- ✅ Agent attempted to read data.json (error observed)
+- ✅ Agent recognized the error
+- ✅ report.txt exists with correct content
+- ✅ No crash or unhandled exception
+- ✅ Did not create data.json
+- ✅ No stack traces included

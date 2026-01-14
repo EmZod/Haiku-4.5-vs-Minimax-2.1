@@ -1,0 +1,24 @@
+## ✅ Task Complete
+
+I've successfully created `solution.py` with a fully functional `Stack` class that passes all 8 tests.
+
+### What was implemented:
+
+The `Stack` class includes:
+- **`__init__()`** - Initializes an empty stack using a list
+- **`push(item)`** - Adds an item to the top of the stack
+- **`pop()`** - Removes and returns the top item (raises `IndexError` if empty)
+- **`peek()`** - Returns the top item without removing it (raises `IndexError` if empty)
+- **`is_empty()`** - Returns `True` if the stack is empty
+- **`size()`** - Returns the number of items in the stack
+
+### Test Results:
+✅ All 8 tests pass with exit code 0:
+- test_01_create_empty_stack ✓
+- test_02_push_single_item ✓
+- test_03_push_multiple_items ✓
+- test_04_pop_returns_last_pushed ✓
+- test_05_pop_decreases_size ✓
+- test_06_peek_returns_top_without_removing ✓
+- test_07_pop_empty_raises_exception ✓
+- test_08_peek_empty_raises_exception ✓

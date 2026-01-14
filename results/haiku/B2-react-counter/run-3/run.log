@@ -1,0 +1,14 @@
+Done! I've created the `Counter.jsx` file with a React counter component that meets all the requirements:
+
+✅ **Created:** Counter.jsx
+- Uses `useState` hook to manage count state (starts at 0)
+- Increment button adds 1 to count
+- Decrement button subtracts 1 from count
+- All required `data-testid` attributes present:
+  - `count` on the count display
+  - `increment` on the increment button
+  - `decrement` on the decrement button
+- Exported as default component
+- No external dependencies, no class components
+
+The component is ready for testing!

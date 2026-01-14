@@ -1,0 +1,17 @@
+{
+  "file_exists": true,
+  "correct_lines": 3,
+  "content_correct": true,
+  "attempted_read": true,
+  "write_calls": 2,
+  "used_tools": true,
+  "did_not_create_data": true,
+  "score": 5,
+  "max_score": 5,
+  "passed": true,
+  "task": "E1-handle-missing-file",
+  "model": "minimax",
+  "run": 1,
+  "duration_seconds": 25,
+  "timestamp": "2026-01-14T21:07:04+05:30"
+}

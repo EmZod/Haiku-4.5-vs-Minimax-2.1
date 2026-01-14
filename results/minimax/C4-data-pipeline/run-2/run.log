@@ -1,0 +1,14 @@
+**Done!** The `summary.csv` file has been created successfully.
+
+**Summary of the pipeline execution:**
+| Customer | Order Count | Total Spent | Avg Order Value |
+|----------|-------------|-------------|-----------------|
+| Charlie  | 2           | $405.00     | $202.50         |
+| Alice    | 2           | $300.00     | $150.00         |
+| Bob      | 1           | $125.00     | $125.00         |
+
+**Verification:**
+- ✓ Correct CSV headers
+- ✓ Only completed orders included (5 of 7 orders)
+- ✓ Accurate calculations for totals and averages
+- ✓ Sorted by `total_spent` in descending order

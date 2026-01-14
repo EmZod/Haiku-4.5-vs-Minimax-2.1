@@ -1,0 +1,30 @@
+Perfect! ✅ Task completed successfully.
+
+## Summary
+
+I've created `intervals.py` with the `merge_intervals` function that:
+
+**Implementation Details:**
+- Sorts intervals by start time
+- Iterates through sorted intervals, merging overlapping/touching ones
+- Uses `max()` to handle nested intervals correctly
+- Handles all edge cases
+
+**All 8 test cases passed:**
+1. Empty input
+2. Single interval
+3. Multiple overlapping intervals
+4. Adjacent intervals (touching)
+5. Overlapping at start boundary
+6. Nested intervals
+7. Complex overlapping scenario
+8. Multiple overlaps requiring merging
+
+The function correctly handles:
+- Empty lists → returns `[]`
+- Single intervals → returns as-is
+- Non-overlapping intervals → returns sorted
+- All overlapping → merges into one
+- Adjacent intervals (e.g., `[1,2]` and `[2,3]`) → merges them
+- Nested intervals → keeps outer boundary
+- Unsorted input → sorts before processing

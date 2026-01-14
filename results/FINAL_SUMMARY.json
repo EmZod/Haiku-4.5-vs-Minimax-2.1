@@ -1,0 +1,34 @@
+{
+  "benchmark": "MiniMax M2.1 vs Claude Haiku",
+  "date": "2026-01-14",
+  "tasks_tested": 5,
+  "runs_per_task_per_model": 3,
+  "total_runs": 30,
+  "results": {
+    "minimax": {
+      "passed": 15,
+      "failed": 0,
+      "pass_rate": "100%",
+      "avg_duration_seconds": 22
+    },
+    "haiku": {
+      "passed": 15,
+      "failed": 0,
+      "pass_rate": "100%",
+      "avg_duration_seconds": 14.4
+    }
+  },
+  "by_task": {
+    "A1-create-file": {"minimax": "3/3", "haiku": "3/3"},
+    "A2-count-lines": {"minimax": "3/3", "haiku": "3/3"},
+    "B1-fizzbuzz": {"minimax": "3/3", "haiku": "3/3"},
+    "B2-react-counter": {"minimax": "3/3", "haiku": "3/3"},
+    "E1-handle-missing-file": {"minimax": "3/3", "haiku": "3/3"}
+  },
+  "conclusions": [
+    "MiniMax M2.1 matches Haiku accuracy on all tested tasks",
+    "Haiku is ~50% faster than MiniMax",
+    "Both models show 100% consistency",
+    "No hallucination observed in either model"
+  ]
+}
