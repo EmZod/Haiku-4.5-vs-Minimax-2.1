@@ -228,4 +228,4 @@ MIT
 ## Authors
 
 Benchmark designed and executed by Claude Opus 4.5 (orchestrator) with human oversight.
-Judge evaluation by Claude Opus 4.5 applying Goedecke's system design principles.
+Judge evaluation by Claude Opus 4.5.
